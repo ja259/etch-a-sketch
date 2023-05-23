@@ -1,5 +1,7 @@
 /* javascript.js */
 
+let color = "black";
+
 document.addEventListener("DOMContentLoaded", function(){
      createBoard(16);
 
@@ -37,4 +39,19 @@ function getSize(){
         message.innerHTML = "Now you can play!";
         return input;
     }
+}
+
+function colorDiv(){
+    if(Choice == "random"){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else{
+        this.style.backgroundColor = 'black';
+    }
+
+
+}
+
+function setColor(colorChoice){
+    color = colorChoice;
 }
